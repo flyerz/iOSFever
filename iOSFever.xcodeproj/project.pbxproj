@@ -16,12 +16,12 @@
 		E23ECC501AD5A0CE00D7C509 /* ImageFlip.m in Sources */ = {isa = PBXBuildFile; fileRef = E23ECC4F1AD5A0CE00D7C509 /* ImageFlip.m */; };
 		E23ECC551AD5A0F700D7C509 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = E23ECC521AD5A0F700D7C509 /* AppConfig.plist */; };
 		E23ECC561AD5A0F700D7C509 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = E23ECC541AD5A0F700D7C509 /* Config.m */; };
+		E23ECC581AD5A7E600D7C509 /* ConfigTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E23ECC571AD5A7E600D7C509 /* ConfigTest.m */; };
 		E28B22D51AD59B39008D9FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D41AD59B39008D9FC0 /* main.m */; };
 		E28B22D81AD59B39008D9FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D71AD59B39008D9FC0 /* AppDelegate.m */; };
 		E28B22DE1AD59B39008D9FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28B22DC1AD59B39008D9FC0 /* Main.storyboard */; };
 		E28B22E01AD59B39008D9FC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28B22DF1AD59B39008D9FC0 /* Images.xcassets */; };
 		E28B22E31AD59B39008D9FC0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28B22E11AD59B39008D9FC0 /* LaunchScreen.xib */; };
-		E28B22EF1AD59B39008D9FC0 /* iOSFeverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22EE1AD59B39008D9FC0 /* iOSFeverTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 		E23ECC521AD5A0F700D7C509 /* AppConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfig.plist; sourceTree = "<group>"; };
 		E23ECC531AD5A0F700D7C509 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		E23ECC541AD5A0F700D7C509 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		E23ECC571AD5A7E600D7C509 /* ConfigTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTest.m; sourceTree = "<group>"; };
 		E28B22CF1AD59B39008D9FC0 /* iOSFever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28B22D31AD59B39008D9FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E28B22D41AD59B39008D9FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		E28B22E21AD59B39008D9FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E28B22E81AD59B39008D9FC0 /* iOSFeverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSFeverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28B22ED1AD59B39008D9FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E28B22EE1AD59B39008D9FC0 /* iOSFeverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSFeverTests.m; sourceTree = "<group>"; };
 		FF691867889BF681AE9DF8CC /* Pods-iOSFever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFever.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFever/Pods-iOSFever.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,7 +203,7 @@
 		E28B22EB1AD59B39008D9FC0 /* iOSFeverTests */ = {
 			isa = PBXGroup;
 			children = (
-				E28B22EE1AD59B39008D9FC0 /* iOSFeverTests.m */,
+				E23ECC571AD5A7E600D7C509 /* ConfigTest.m */,
 				E28B22EC1AD59B39008D9FC0 /* Supporting Files */,
 			);
 			path = iOSFeverTests;
@@ -386,7 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E28B22EF1AD59B39008D9FC0 /* iOSFeverTests.m in Sources */,
+				E23ECC581AD5A7E600D7C509 /* ConfigTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

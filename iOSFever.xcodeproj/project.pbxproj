@@ -10,7 +10,6 @@
 		A5703DBD128AF042D1FAC055 /* libPods-iOSFever.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E445A306B8F773E430C8891 /* libPods-iOSFever.a */; };
 		E28B22D51AD59B39008D9FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D41AD59B39008D9FC0 /* main.m */; };
 		E28B22D81AD59B39008D9FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D71AD59B39008D9FC0 /* AppDelegate.m */; };
-		E28B22DB1AD59B39008D9FC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22DA1AD59B39008D9FC0 /* ViewController.m */; };
 		E28B22DE1AD59B39008D9FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28B22DC1AD59B39008D9FC0 /* Main.storyboard */; };
 		E28B22E01AD59B39008D9FC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28B22DF1AD59B39008D9FC0 /* Images.xcassets */; };
 		E28B22E31AD59B39008D9FC0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28B22E11AD59B39008D9FC0 /* LaunchScreen.xib */; };
@@ -35,8 +34,6 @@
 		E28B22D41AD59B39008D9FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E28B22D61AD59B39008D9FC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E28B22D71AD59B39008D9FC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E28B22D91AD59B39008D9FC0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E28B22DA1AD59B39008D9FC0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E28B22DD1AD59B39008D9FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E28B22DF1AD59B39008D9FC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E28B22E21AD59B39008D9FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -65,6 +62,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E23ECC371AD59FAF00D7C509 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E28B22DC1AD59B39008D9FC0 /* Main.storyboard */,
+				E28B22E11AD59B39008D9FC0 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E23ECC381AD59FB700D7C509 /* ViewCotnrollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewCotnrollers;
+			sourceTree = "<group>";
+		};
+		E23ECC391AD59FDD00D7C509 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		E28B22C61AD59B39008D9FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -88,13 +108,9 @@
 		E28B22D11AD59B39008D9FC0 /* iOSFever */ = {
 			isa = PBXGroup;
 			children = (
-				E28B22D61AD59B39008D9FC0 /* AppDelegate.h */,
-				E28B22D71AD59B39008D9FC0 /* AppDelegate.m */,
-				E28B22D91AD59B39008D9FC0 /* ViewController.h */,
-				E28B22DA1AD59B39008D9FC0 /* ViewController.m */,
-				E28B22DC1AD59B39008D9FC0 /* Main.storyboard */,
-				E28B22DF1AD59B39008D9FC0 /* Images.xcassets */,
-				E28B22E11AD59B39008D9FC0 /* LaunchScreen.xib */,
+				E23ECC391AD59FDD00D7C509 /* Protocols */,
+				E23ECC381AD59FB700D7C509 /* ViewCotnrollers */,
+				E23ECC371AD59FAF00D7C509 /* Views */,
 				E28B22D21AD59B39008D9FC0 /* Supporting Files */,
 			);
 			path = iOSFever;
@@ -103,6 +119,9 @@
 		E28B22D21AD59B39008D9FC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E28B22DF1AD59B39008D9FC0 /* Images.xcassets */,
+				E28B22D61AD59B39008D9FC0 /* AppDelegate.h */,
+				E28B22D71AD59B39008D9FC0 /* AppDelegate.m */,
 				E28B22D31AD59B39008D9FC0 /* Info.plist */,
 				E28B22D41AD59B39008D9FC0 /* main.m */,
 			);
@@ -278,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E28B22DB1AD59B39008D9FC0 /* ViewController.m in Sources */,
 				E28B22D81AD59B39008D9FC0 /* AppDelegate.m in Sources */,
 				E28B22D51AD59B39008D9FC0 /* main.m in Sources */,
 			);

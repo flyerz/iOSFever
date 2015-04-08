@@ -17,6 +17,9 @@
 		E23ECC551AD5A0F700D7C509 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = E23ECC521AD5A0F700D7C509 /* AppConfig.plist */; };
 		E23ECC561AD5A0F700D7C509 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = E23ECC541AD5A0F700D7C509 /* Config.m */; };
 		E23ECC581AD5A7E600D7C509 /* ConfigTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E23ECC571AD5A7E600D7C509 /* ConfigTest.m */; };
+		E23ECC5B1AD5A8F500D7C509 /* ImgflipResponseTest.json in Resources */ = {isa = PBXBuildFile; fileRef = E23ECC5A1AD5A8F500D7C509 /* ImgflipResponseTest.json */; };
+		E23ECC5D1AD5A93400D7C509 /* ParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E23ECC5C1AD5A93400D7C509 /* ParserTest.m */; };
+		E23ECC5F1AD5AF8000D7C509 /* MemeDataTest.json in Resources */ = {isa = PBXBuildFile; fileRef = E23ECC5E1AD5AF8000D7C509 /* MemeDataTest.json */; };
 		E28B22D51AD59B39008D9FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D41AD59B39008D9FC0 /* main.m */; };
 		E28B22D81AD59B39008D9FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D71AD59B39008D9FC0 /* AppDelegate.m */; };
 		E28B22DE1AD59B39008D9FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28B22DC1AD59B39008D9FC0 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		E23ECC531AD5A0F700D7C509 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		E23ECC541AD5A0F700D7C509 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		E23ECC571AD5A7E600D7C509 /* ConfigTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTest.m; sourceTree = "<group>"; };
+		E23ECC5A1AD5A8F500D7C509 /* ImgflipResponseTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImgflipResponseTest.json; sourceTree = "<group>"; };
+		E23ECC5C1AD5A93400D7C509 /* ParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTest.m; sourceTree = "<group>"; };
+		E23ECC5E1AD5AF8000D7C509 /* MemeDataTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemeDataTest.json; sourceTree = "<group>"; };
 		E28B22CF1AD59B39008D9FC0 /* iOSFever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28B22D31AD59B39008D9FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E28B22D41AD59B39008D9FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,6 +159,15 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
+		E23ECC591AD5A8E400D7C509 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E23ECC5A1AD5A8F500D7C509 /* ImgflipResponseTest.json */,
+				E23ECC5E1AD5AF8000D7C509 /* MemeDataTest.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		E28B22C61AD59B39008D9FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +218,9 @@
 		E28B22EB1AD59B39008D9FC0 /* iOSFeverTests */ = {
 			isa = PBXGroup;
 			children = (
+				E23ECC591AD5A8E400D7C509 /* Resources */,
 				E23ECC571AD5A7E600D7C509 /* ConfigTest.m */,
+				E23ECC5C1AD5A93400D7C509 /* ParserTest.m */,
 				E28B22EC1AD59B39008D9FC0 /* Supporting Files */,
 			);
 			path = iOSFeverTests;
@@ -327,6 +344,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23ECC5B1AD5A8F500D7C509 /* ImgflipResponseTest.json in Resources */,
+				E23ECC5F1AD5AF8000D7C509 /* MemeDataTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23ECC5D1AD5A93400D7C509 /* ParserTest.m in Sources */,
 				E23ECC581AD5A7E600D7C509 /* ConfigTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

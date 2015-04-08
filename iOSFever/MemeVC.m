@@ -10,6 +10,7 @@
 #import "ImageFlip.h"
 #import "MemeData.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "AssetsLibrary/AssetsLibrary.h"
 
 @interface MemeVC () <UIAlertViewDelegate>
 //IBOutlets
@@ -116,14 +117,20 @@
 
 - (IBAction)saveButtonClicked:(id)sender {
     __weak MemeVC* weakSelf = self;
-    [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:self.currentMeme.url] options:SDWebImageContinueInBackground progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-        if (error) {
-            [[[UIAlertView alloc] initWithTitle:@"Alert!" message:@"Can't save image" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-        } else {
-            [self startBackgroundWork];
-            UIImageWriteToSavedPhotosAlbum(image, weakSelf, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-        }
-    }];
+    
+    if ([ALAssetsLibrary authorizationStatus] != ALAuthorizationStatusAuthorized) {
+        [[[UIAlertView alloc] initWithTitle:@"Alert!" message:@"If you want to save, please enable this application in Settings->Privacy->Photos" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    } else {
+        [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:self.currentMeme.url] options:SDWebImageContinueInBackground progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            if (error) {
+                [[[UIAlertView alloc] initWithTitle:@"Alert!" message:@"Can't save image" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+            } else {
+                [self startBackgroundWork];
+                UIImageWriteToSavedPhotosAlbum(image, weakSelf, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+            }
+        }];
+    }
+    
 }
 
 #pragma mark - UIAlertViewDelegate

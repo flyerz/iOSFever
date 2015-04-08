@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5703DBD128AF042D1FAC055 /* libPods-iOSFever.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E445A306B8F773E430C8891 /* libPods-iOSFever.a */; };
 		E28B22D51AD59B39008D9FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D41AD59B39008D9FC0 /* main.m */; };
 		E28B22D81AD59B39008D9FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22D71AD59B39008D9FC0 /* AppDelegate.m */; };
 		E28B22DB1AD59B39008D9FC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B22DA1AD59B39008D9FC0 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E445A306B8F773E430C8891 /* libPods-iOSFever.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSFever.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24DA59395D44C925FE83B8A /* Pods-iOSFever.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFever.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFever/Pods-iOSFever.debug.xcconfig"; sourceTree = "<group>"; };
 		E28B22CF1AD59B39008D9FC0 /* iOSFever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28B22D31AD59B39008D9FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E28B22D41AD59B39008D9FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		E28B22E81AD59B39008D9FC0 /* iOSFeverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSFeverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28B22ED1AD59B39008D9FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E28B22EE1AD59B39008D9FC0 /* iOSFeverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSFeverTests.m; sourceTree = "<group>"; };
+		FF691867889BF681AE9DF8CC /* Pods-iOSFever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFever.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFever/Pods-iOSFever.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5703DBD128AF042D1FAC055 /* libPods-iOSFever.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				E28B22D11AD59B39008D9FC0 /* iOSFever */,
 				E28B22EB1AD59B39008D9FC0 /* iOSFeverTests */,
 				E28B22D01AD59B39008D9FC0 /* Products */,
+				FACD9F4A48134D5E0425CB44 /* Pods */,
+				E47E2D5BCD14F6F33742EEC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E47E2D5BCD14F6F33742EEC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E445A306B8F773E430C8891 /* libPods-iOSFever.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FACD9F4A48134D5E0425CB44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B24DA59395D44C925FE83B8A /* Pods-iOSFever.debug.xcconfig */,
+				FF691867889BF681AE9DF8CC /* Pods-iOSFever.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E28B22F21AD59B39008D9FC0 /* Build configuration list for PBXNativeTarget "iOSFever" */;
 			buildPhases = (
+				960289F58ABC6C2F145A4F07 /* Check Pods Manifest.lock */,
 				E28B22CB1AD59B39008D9FC0 /* Sources */,
 				E28B22CC1AD59B39008D9FC0 /* Frameworks */,
 				E28B22CD1AD59B39008D9FC0 /* Resources */,
+				0037F6E8427F52E4132222CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0037F6E8427F52E4132222CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSFever/Pods-iOSFever-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		960289F58ABC6C2F145A4F07 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E28B22CB1AD59B39008D9FC0 /* Sources */ = {
@@ -343,6 +402,7 @@
 		};
 		E28B22F31AD59B39008D9FC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24DA59395D44C925FE83B8A /* Pods-iOSFever.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSFever/Info.plist;
@@ -353,6 +413,7 @@
 		};
 		E28B22F41AD59B39008D9FC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF691867889BF681AE9DF8CC /* Pods-iOSFever.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSFever/Info.plist;
@@ -414,6 +475,7 @@
 				E28B22F41AD59B39008D9FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E28B22F51AD59B39008D9FC0 /* Build configuration list for PBXNativeTarget "iOSFeverTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +484,7 @@
 				E28B22F71AD59B39008D9FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

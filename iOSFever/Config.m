@@ -16,9 +16,9 @@
     return [[NSDictionary alloc] initWithContentsOfFile:path];
 }
 
-+(NSString *)sourceUrl
++(NSString *)memeSourceUrl
 {
-    return [[Config getConfig] objectForKey:@"sourceUrl"];
+    return [[Config getConfig] objectForKey:@"memeAPISourceUrl"];
 }
 
 @end

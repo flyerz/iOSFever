@@ -80,18 +80,35 @@
 }
 
 -(void)nextMeme {
-   self.currentMeme = [self.dataSource objectAtIndex:arc4random() % self.dataSource.count];
+    if (self.dataSource && self.dataSource.count > 0) {
+        self.currentMeme = [self.dataSource objectAtIndex:arc4random() % self.dataSource.count];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Alert!" message:@"There are no memes. You can try to refresh with the next button" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }
 }
 
 
 -(void)updateUIWithMeme:(MemeData*)newMeme
 {
-    self.memeTitle.text = newMeme.name;
     [self.activityIndicator startAnimating];
+    self.memeTitle.text = newMeme.name;
     [self.memeImage sd_setImageWithURL:[NSURL URLWithString:newMeme.url] placeholderImage:nil options:SDWebImageDelayPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (error) {
+            [[[UIAlertView alloc] initWithTitle:@"Alert!" message:@"Couldn't load the image:(" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        } else {
+            self.memeImage.image = image;
+        }
         [self.activityIndicator stopAnimating];
-        self.memeImage.image = image;
     }];
+}
+
+#pragma mark - Lazy instantiation
+-(NSArray *)dataSource
+{
+    if (!_dataSource) {
+        _dataSource = [NSArray new];
+    }
+    return _dataSource;
 }
 
 #pragma mark - Image save callback
@@ -112,7 +129,11 @@
 
 #pragma mark - UI Event handlers
 - (IBAction)nextButtonClicked:(id)sender {
-    [self nextMeme];
+    if (!self.dataSource || self.dataSource.count < 1) {
+        [self loadImages];
+    } else {
+        [self nextMeme];
+    }
 }
 
 - (IBAction)saveButtonClicked:(id)sender {
@@ -131,12 +152,6 @@
         }];
     }
     
-}
-
-#pragma mark - UIAlertViewDelegate
--(void)alertViewCancel:(UIAlertView *)alertView
-{
-    [alertView removeFromSuperview];
 }
 
 @end

@@ -8,5 +8,5 @@
 
 #import <Foundation/Foundation.h>
 @interface Config : NSObject
-+(NSString*)sourceUrl;
++(NSString*)memeSourceUrl;
 @end

@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>sourceUrl</key>
+	<key>memeAPISourceUrl</key>
 	<string>https://api.imgflip.com/get_memes</string>
 </dict>
 </plist>

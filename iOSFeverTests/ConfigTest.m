@@ -17,14 +17,14 @@
 @implementation ConfigTest
 
 - (void)testSourceUrl {
-    if (![[Config sourceUrl] isKindOfClass:[NSString class]]) {
-        XCTFail(@"[Config sourceUrl] is not string. sourceurl: %@", [Config sourceUrl]);
+    if (![[Config memeSourceUrl] isKindOfClass:[NSString class]]) {
+        XCTFail(@"[Config memeSourceUrl] is not a string. sourceurl: %@", [Config memeSourceUrl]);
     } else {
-        NSString* url = [Config sourceUrl];
+        NSString* url = [Config memeSourceUrl];
         if ([url rangeOfString:@"http://"].location == NSNotFound && [url rangeOfString:@"https://"].location == NSNotFound) {
-            XCTFail(@"[Config sourceUrl] is not a valid url. sourceurl: %@", url);
+            XCTFail(@"[Config memeSourceUrl] is not a valid url. sourceurl: %@", url);
         }
     }
-    XCTAssert(YES, @"[Config sourceUrl] seems good");
+    XCTAssert(YES, @"[Config memeSourceUrl] seems good");
 }
 @end
